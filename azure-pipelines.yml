@@ -17,3 +17,16 @@ steps:
     codeCoverageTool: 'jaCoCo' 
     goals: 'package'
     sonarQubeRunAnalysis: true
+
+
+- task: SonarQubePrepare@4
+  inputs:
+    SonarQube: 'my-sample-sonarserver'
+    scannerMode: 'Other'
+    extraProperties: |
+      sonar.projectKey=ExcelFileReader \
+      sonar.host.url=http://my-sample-sonarserver.centralindia.azurecontainer.io:9000 \
+      sonar.login=1d50dc882300a0c8c622fedc1d6bda6dc3a4e04b
+- task: SonarQubePublish@4
+  inputs:
+    pollingTimeoutSec: '300'
