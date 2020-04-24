@@ -1,5 +1,5 @@
 # Maven
-- task: SonarQubePublish@4
+ task: SonarQubePublish@4
   inputs:
     pollingTimeoutSec: '300'
 # Build your Java project and run tests with Apache Maven.
