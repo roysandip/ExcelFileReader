@@ -16,7 +16,8 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     codeCoverageTool: 'jaCoCo' 
     goals: 'package'
-    #sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
 
 
 - task: SonarCloudPrepare@1
@@ -24,8 +25,7 @@ steps:
     SonarCloud: 'my-sample-sonarcloud-conn'
     organization: 'sandiproy'
     scannerMode: 'Other'
-
-
+    
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
