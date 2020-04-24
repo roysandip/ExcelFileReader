@@ -18,12 +18,14 @@ steps:
     goals: 'package'
     #sonarQubeRunAnalysis: true
 
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
 
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'my-sample-sonarcloud-conn'
     organization: 'sandiproy'
     scannerMode: 'Other'
+
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
