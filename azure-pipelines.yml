@@ -19,7 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageToolOption: 'cobertura' 
-    summaryFileLocation: $(System.DefaultWorkingDirectory)/ExcelFileReader/**/site/cobertura/coverage.html
+    codeCoverageToolOption: 'jaCoCo' 
+    summaryFileLocation: $(System.DefaultWorkingDirectory)/ExcelFileReader/**/site/jaCoCo/coverage.html
     goals: 'package'
     #sonarQubeRunAnalysis: true
