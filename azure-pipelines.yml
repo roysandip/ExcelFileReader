@@ -21,4 +21,4 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     codeCoverageTool: 'jaCoCo' 
     goals: 'package'
-    #sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: true
