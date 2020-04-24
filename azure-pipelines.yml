@@ -20,5 +20,6 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     codeCoverageToolOption: 'cobertura' 
+    summaryFileLocation: $(System.DefaultWorkingDirectory)/ExcelFileReader/**/site/cobertura/coverage.html
     goals: 'package'
     #sonarQubeRunAnalysis: true
