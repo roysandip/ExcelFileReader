@@ -16,5 +16,14 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     codeCoverageTool: 'jaCoCo' 
     goals: 'package'
-    #sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: true
 
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'my-sample-sonarcloud-conn'
+    organization: 'sandiproy'
+    scannerMode: 'Other'
