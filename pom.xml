@@ -37,7 +37,7 @@
             <properties>
                 <!-- Optional URL to server. Default value is http://localhost:9000 -->
                 <sonar.host.url>
-                  http://my-sample-sonarserver.centralindia.azurecontainer.io/:9000
+                  http://my-sample-sonarserver.centralindia.azurecontainer.io:9000
                 </sonar.host.url>
             </properties>
         </profile>
