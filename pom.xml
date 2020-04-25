@@ -32,10 +32,10 @@
 			<version>3.15</version>
 		</dependency>
 	</dependencies>
-	<!--<build>
+	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>2.7</version>
@@ -46,7 +46,27 @@
 					</formats>
 					<check />
 				</configuration>
-			</plugin>
+			</plugin>-->
+	<plugin>
+	<groupId>org.jacoco</groupId>
+	<artifactId>jacoco-maven-plugin</artifactId>
+	<version>0.8.2</version>
+	<executions>
+		<execution>
+			<goals>
+				<goal>prepare-agent</goal>
+			</goals>
+		</execution>
+		<!-- attached to Maven test phase -->
+		<execution>
+			<id>report</id>
+			<phase>test</phase>
+			<goals>
+				<goal>report</goal>
+			</goals>
+		</execution>
+	</executions>
+</plugin>
 		</plugins>
-	</build>-->
+	</build>
 </project>
