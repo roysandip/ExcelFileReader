@@ -32,7 +32,20 @@ steps:
 #- task: SonarCloudPublish@1
  # inputs:
   #  pollingTimeoutSec: '300
-  
+
+
+# Publish build artifacts
+# Publish build artifacts to Azure Pipelines or a Windows file share
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'drop' 
+    publishLocation: 'Container' # Options: container, filePath
+    #targetPath: # Required when publishLocation == FilePath
+    #parallel: false # Optional
+    #parallelCount: # Optional
+    #fileCopyOptions: #Optional
+    
   # Download build artifacts
 # Download files that were saved as artifacts of a completed build
 - task: DownloadBuildArtifacts@0
