@@ -14,9 +14,9 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    #codeCoverageTool: 'jaCoCo'
-    codeCoverageTool: 'Cobertura'
-    codeCoverageFailIfEmpty: true
+    codeCoverageTool: 'jaCoCo'
+    #codeCoverageTool: 'Cobertura'
+    #codeCoverageFailIfEmpty: true
     goals: 'package'
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
