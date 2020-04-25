@@ -12,7 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelFileReader {
 	public static void main(String[] args) {
 		int recordCount = readFile(args[0]);
-		//System.out.println("\n\nRecord Count is : " + recordCount);
+		System.out.println("\n\nRecord Count is : " + recordCount);
 	}
 
 	@SuppressWarnings("deprecation")
