@@ -23,7 +23,7 @@ steps:
 
 - task: reportgenerator@4
   inputs:
-    reports: 'coverage.html'
+    reports: 'coverage.xml'
     targetdir: 'coveragereport'
 
 
