@@ -16,19 +16,7 @@
 		<sonar.organization>sandiproy</sonar.organization>
 		<sonar.projectKey>ExcelFileReader</sonar.projectKey>
 	</properties>
-	 <plugins>
-   <plugin>
-		<groupId>org.codehaus.mojo</groupId>
-		<artifactId>cobertura-maven-plugin</artifactId>
-		<version>2.6</version>
-		<configuration>
-			<formats>
-				<format>html</format>
-				<format>xml</format>
-			</formats>
-		</configuration>
-	</plugin>
-  </plugins>
+	 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -42,5 +30,22 @@
 			<version>3.15</version>
 		</dependency>
 	</dependencies>
-	 
+	 <build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
