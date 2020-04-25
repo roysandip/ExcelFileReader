@@ -33,6 +33,15 @@ steps:
  # inputs:
   #  pollingTimeoutSec: '300
 
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: $(Agent.BuildDirectory)
+    contents: '**' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    #cleanTargetFolder: false # Optional
+    #overWrite: false # Optional
+    #flattenFolders: false # Optional
+    #preserveTimestamp: false # Optional
 
 # Publish build artifacts
 # Publish build artifacts to Azure Pipelines or a Windows file share
