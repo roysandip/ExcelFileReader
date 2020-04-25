@@ -22,3 +22,13 @@ steps:
     sqMavenPluginVersionChoice: 'latest'
 
 
+
+#- task: SonarCloudPrepare@1
+ # inputs:
+  #  SonarCloud: 'my-sample-sonarcloud-conn'
+   # organization: 'sandiproy'
+    #scannerMode: 'Other'
+    
+#- task: SonarCloudPublish@1
+ # inputs:
+  #  pollingTimeoutSec: '300
