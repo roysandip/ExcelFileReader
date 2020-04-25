@@ -15,6 +15,7 @@
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.organization>sandiproy</sonar.organization>
 		<sonar.projectKey>ExcelFileReader</sonar.projectKey>
+		<sonar.exclusions>**/*.xml</sonar.exclusions>
 	</properties>
 
 	<dependencies>
