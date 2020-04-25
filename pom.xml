@@ -16,7 +16,7 @@
 		<sonar.organization>sandiproy</sonar.organization>
 		<sonar.projectKey>ExcelFileReader</sonar.projectKey>
 		<sonar.exclusions>**/*.xml</sonar.exclusions>
-		<sonar.coverage.jacoco.xmlReportPaths>**/site/jacoco-it/*.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<!--<sonar.coverage.jacoco.xmlReportPaths>**/site/jacoco-it/*.xml</sonar.coverage.jacoco.xmlReportPaths>-->
 	</properties>
 
 	<dependencies>
