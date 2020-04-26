@@ -34,8 +34,7 @@ steps:
   #  pollingTimeoutSec: '300
   
   
-  
-  - task: CopyFiles@2
+- task: CopyFiles@2
   inputs:
     sourceFolder: $(Agent.BuildDirectory)/target/*.jar
     contents: '**' 
