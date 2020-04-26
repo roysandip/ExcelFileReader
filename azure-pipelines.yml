@@ -8,7 +8,7 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    mavenOptions: '-Dsonar.organization=sandiproy'
+    mavenOptions: '-Xmx1024m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
@@ -36,8 +36,8 @@ steps:
   
 - task: CopyFiles@2
   inputs:
-    sourceFolder: $(Agent.BuildDirectory)/target/*.jar
-    contents: '**' 
+    sourceFolder: $(Agent.BuildDirectory)/target
+    contents: '*.jar' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
     #cleanTargetFolder: false # Optional
     #overWrite: false # Optional
