@@ -36,7 +36,7 @@ steps:
   
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(Agent.BuildDirectory)/target'
+    sourceFolder: '$(Agent.BuildDirectory)/s/target'
     contents: '*.jar' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
     #cleanTargetFolder: false # Optional
