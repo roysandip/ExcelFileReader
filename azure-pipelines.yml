@@ -1,6 +1,6 @@
 trigger:
-batch: true
-- master
+  batch: true
+  - master
 
 pool:
   vmImage: 'ubuntu-latest'
