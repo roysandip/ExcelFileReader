@@ -20,7 +20,7 @@ public class ExcelFileReader {
 		int recordCount = 0;
 		try {
 			
-			//"C:\\Users\\202097\\Documents\\sample.xlsx"
+			
 			File file = new File(fileName); // creating a new
 																// file instance
 			FileInputStream fis = new FileInputStream(file); // obtaining bytes
